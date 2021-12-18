@@ -3,9 +3,9 @@ import UserService from '../services/CRUDService'
 
 let getHomePage = async (req, res) => {
     try {
-        let data = await db.User.findAll();
+        //let data = await db.User.findAll();
         return res.render('homePage.ejs', {
-            data: JSON.stringify(data),
+            data: JSON.stringify({}),
         });
     } catch (e) {
         console.log(e);
@@ -13,9 +13,9 @@ let getHomePage = async (req, res) => {
 }
 
 let getUser = async (req, res) => {
-    let data = await UserService.getAllUser();
+    //let data = await UserService.getAllUser();
     return res.render('listUser.ejs', {
-        dataTable: data
+        dataTable: {}
     });
 }
 
