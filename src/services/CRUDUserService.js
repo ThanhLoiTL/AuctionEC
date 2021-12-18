@@ -5,7 +5,7 @@ const salt = bcrypt.genSaltSync(10);
 let postUser = (data) => {
     return new Promise(async (resolve, reject) => {
         try {
-            if (data.fullName && data.email && data.password && data.phone && data.money && data.roleId) {
+            if (data.fullName && data.email && data.password && data.phone && data.roleId) {
                 let user = await db.User.findOne({
                     where: {
                         email: data.email
