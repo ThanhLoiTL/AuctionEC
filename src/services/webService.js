@@ -107,7 +107,7 @@ let checkoutOrder = (userId, auctionId, yourBanner) => {
             if (!winAuction) {
                 mess = "That Bai";
             } else {
-                if (user.money >= infoAuction.auctionMoney) {
+                if (Number(user.money) >= Number(infoAuction.auctionMoney)) {
                     winAuction.yourBanner = yourBanner;
                     winAuction.status = 0;
                     user.money -= infoAuction.auctionMoney;
